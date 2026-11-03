@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* paper / ink / cat yellow, locked theme */
+    --background: 44 33% 94%;
+    --foreground: 45 14% 9%;
+    --card: 44 33% 94%;
+    --card-foreground: 45 14% 9%;
+    --popover: 44 33% 94%;
+    --popover-foreground: 45 14% 9%;
+    --primary: 45 14% 9%;
+    --primary-foreground: 44 33% 94%;
+    --secondary: 43 20% 89%;
+    --secondary-foreground: 45 14% 9%;
+    --muted: 43 20% 89%;
+    --muted-foreground: 42 8% 36%;
+    --accent: 47 100% 53%;
+    --accent-foreground: 45 14% 9%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 44 33% 94%;
+    --border: 44 12% 78%;
+    --input: 44 12% 78%;
+    --ring: 45 14% 9%;
+    --radius: 0px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .font-display {
+    font-family: "Instrument Serif", Georgia, serif;
+  }
+
+  .font-mono-data {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  ::selection {
+    background: hsl(47 100% 53%);
+    color: hsl(45 14% 9%);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(45 14% 9%);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
